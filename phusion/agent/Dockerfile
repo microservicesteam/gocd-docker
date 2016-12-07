@@ -9,7 +9,7 @@ ARG DOWNLOAD_URL="https://download.go.cd/binaries"
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y -q unzip openjdk-7-jre-headless git mercurial subversion
+RUN apt-get install -y -q unzip openjdk-8-jre-headless git mercurial subversion maven
 
 RUN mkdir /etc/service/go-agent
 ADD go-agent-start.sh /etc/service/go-agent/run
